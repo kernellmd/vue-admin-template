@@ -1,7 +1,7 @@
 <template>
   <div class="login-container">
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on" label-position="left">
-      <h3 class="title">vue-admin-template</h3>
+      <h3 class="title">学能通门店管理系统登录</h3>
       <el-form-item prop="username">
         <span class="svg-container">
           <svg-icon icon-class="user" />
@@ -25,12 +25,31 @@
       </el-form-item>
       <el-form-item>
         <el-button :loading="loading" type="primary" style="width:100%;" @click.native.prevent="handleLogin">
-          Sign in
+          <!--Sign in-->
+          登录
         </el-button>
       </el-form-item>
       <div class="tips">
-        <span style="margin-right:20px;">username: admin</span>
-        <span> password: admin</span>
+        <div>
+          <!--管理员-->
+          <span style="margin-right:20px;">username: admin</span>
+          <span> password: admin</span>
+        </div>
+        <div>
+          <!--教师-->
+          <span style="margin-right:20px;">username: teacher</span>
+          <span> password: teacher</span>
+        </div>
+        <div>
+          <!--评测师-->
+          <span style="margin-right:20px;">username: assessor</span>
+          <span> password: assessor</span>
+        </div>
+        <div>
+          <!--财务员-->
+          <span style="margin-right:20px;">username: treasurer</span>
+          <span> password: treasurer</span>
+        </div>
       </div>
     </el-form>
   </div>
@@ -49,6 +68,7 @@ export default {
         callback()
       }
     }
+    // 实际上并没有进行密码校验
     const validatePass = (rule, value, callback) => {
       if (value.length < 5) {
         callback(new Error('密码不能小于5位'))

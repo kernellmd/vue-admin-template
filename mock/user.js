@@ -6,6 +6,15 @@ const tokens = {
   },
   editor: {
     token: 'editor-token'
+  },
+  teacher: {
+    token: 'teacher-token'
+  },
+  assessor: {
+    token: 'teacher-token'
+  },
+  treasurer: {
+    token: 'teacher-token'
   }
 }
 
@@ -21,6 +30,12 @@ const users = {
     introduction: 'I am an editor',
     avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
     name: 'Normal Editor'
+  },
+  'teacher-token': {
+    roles: ['teacher'],
+    introduction: 'I am an  teacher',
+    avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
+    name: 'Normal Teacher'
   }
 }
 
